@@ -82,7 +82,7 @@ func startServer() {
 		},
 	}))
 	e.Use(middleware.Recover())
-	petrol.RegisterRoutes(e.Group("/petrol"))
+	petrol.RegisterRoutes(e.Group("/api/petrol"))
 	e.GET("/", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, "OK")
 	})
